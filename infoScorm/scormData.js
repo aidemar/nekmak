@@ -169,7 +169,7 @@ var prueba = scormData.info;
 var prueba2 = scormData.info[0].escenasElements;
     console.log(prueba2);
 var prueba3 = scormData.info[0].escenasElements[0].nombreEnMenu;
-    console.log(prueba3);
+    console.log("prueba3 " + prueba3);
 
 /*for (var i = 0; i < prueba2.length; i++) {
   console.log(prueba2[i].nombreEnMenu);
@@ -690,8 +690,8 @@ function chechSpecific(valor){
   //********** Menu **********//
   //**************************//
 
-  function animateOpenMenu(){
       // document.getElementById("menu").innerHTML = '<div id="main-menu"><a href=""><p class="first-p">'+ scormData.info[0].escenasElements[0].nombreEnMenu +'</p></a><a href=""><p>'+scormData.info[0].escenasElements[1].nombreEnMenu+'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[2].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[3].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[4].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[5].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[6].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[7].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[8].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[9].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[10].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[11].nombreEnMenu +'</p></a><a href=""><p>'+ scormData.info[0].escenasElements[12].nombreEnMenu +'</p></a><a href=""><p>Close X</p></a></div><div id="submenu"><a href=""><p class="first-p">Program Administration</p></a><a href=""><p>Product and Process Development</p></a><a href=""><p>Tooling/Machine Fixtures Development</p></a><a href=""><p>Manufacturing System Development</p></a><a href=""><p>Personnel Assigment and Training Development</p></a></div>'
+/*  function animateOpenMenu(){
       
   var html= " ";
   html += '<div id="main-menu">'
@@ -699,14 +699,13 @@ function chechSpecific(valor){
     if(prueba2[i].esSubindice == false && prueba2[i].visibleEnMenu == true){
         console.log(i);
         html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirElemento();">'+ prueba2[i].nombreEnMenu +'</a>'
-        // ' + prueba2[i].ID + '
         console.log(prueba2[i].nombreEnMenu);
     }
 
   }
         html += '</div>'
         document.getElementById("menu").innerHTML = html;
- 
+ */
 
 
 
@@ -716,10 +715,10 @@ function chechSpecific(valor){
       // document.getElementById("menu").innerHTML = lookForMenu();
     /*  document.getElementById("menu").style.height = "100%";
       document.getElementById("menu").style.width = "100%";*/
-  };
+  // };
 
-  function imprimirElemento() {
-    // alert(idClickeado);
+/*  function imprimirElemento() {
+    alert(idClickeado);
     var htmlSubMenu = " ";
     htmlSubMenu += '<div id="submenu">'
       for (var i = 0; i < prueba2.length; i++){
@@ -733,7 +732,7 @@ function chechSpecific(valor){
         htmlSubMenu += '</div>'
         document.getElementById("menu2").innerHTML = htmlSubMenu;
   }
-
+*/
 
 
   function lookForMenu(){
