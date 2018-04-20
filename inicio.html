@@ -2,67 +2,83 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  
-<meta name="authoring-tool" content="Adobe_Animate_CC">
+  <meta name="authoring-tool" content="Adobe_Animate_CC">
   <title>inicio</title>
-  
-<link rel="stylesheet" href="css/estilosTemplate.css">
-  
-<script>
+  <link rel="stylesheet" href="css/estilosTemplate.css">
+  <!-- <script>
     function autoResize(i){
       var iframeHeight=
       (i).contentWindow.document.body.scrollHeight;
       (i).height=iframeHeight+20;
-    }
-    
-
-  
-</script>
-  
-<script language="JavaScript" src="infoScorm/scormData.js"></script>
+    }  
+  </script> -->
+  <script language="JavaScript" src="infoScorm/scormData.js"></script>
   <script language="JavaScript" src="scripts/SCO.js"></script>
   <script language="JavaScript" src="scripts/SCORMFlash.js"></script>
-  <!-- write your code here -->
+  <script type="text/javascript" src="infoScorm/data.js"></script>
 </head>
-<body style="margin:0px;">
 
-  <div id="barraControl">
-    <div class="barraContent">
-      <div class="barraElement10" id="butPrev">
-        <a href="javascript:animatePrevSlide();"><img src="css/images/atras.png"/></a>
-      </div>
-      <div class="barraElement10">
-        <a href="javascript:animateOpenMenu();"><img src="css/images/menu.png"/></a>
-      </div>
-      <div class="barraElement50" id="contadorSlides">
-        <progress value="22" max="100" class="progressBar"></progress>
-      </div>
-      <div class="barraElement20" id="contadorSlidesString">
-        <p>02 / 30</p>
-      </div>
-      <div class="barraElement10" id="butNext">
-        <a href="javascript:animateNextSlide();"><img src="css/images/adelante.png"/></a>
-      </div>
-    </div>
-  </div>
-  <div class="stockIframe " id="contentIframe">
-    &nbsp;
-  </div>
-  <!--<div id="menu">
-  </div>-->
-  <div id="menu">
-  </div>
-  <div id="popUpDiv">
-  </div>
-  
+<body>
+	<header>
+		<p class="header-title">Nemak Product Develoment System</p>
+		<p id="menu-title" >Ejemplo</p>
+	</header>
+	<section id="menu">
+	<!-- 	 <div id="main-menu">
+			<a href=""><p class="first-p">Overview</p></a>
+			<a href=""><p>Milestone -2</p></a>
+			<a href=""><p>Milestone -1</p></a>
+			<a href=""><p>Milestone 0</p></a>
+			<a href=""><p>Milestone 1</p></a>
+			<a href=""><p>Milestone 2</p></a>
+			<a href=""><p>Milestone 3</p></a>
+			<a href=""><p>Milestone 4</p></a>
+			<a href=""><p>Milestone 5</p></a>
+			<a href=""><p>Milestone 6</p></a>
+			<a href=""><p>Milestone 7</p></a>
+			<a href=""><p>Milestone 8</p></a>
+			<a href=""><p>Milestone 9</p></a>
+			<a href=""><p>Close X</p></a>
+		</div>
+		<div id="submenu">
+			<a href=""><p class="first-p">Program Administration</p></a>
+			<a href=""><p>Product and Process Development</p></a>
+			<a href=""><p>Tooling/Machine Fixtures Development</p></a>
+			<a href=""><p>Manufacturing System Development</p></a>
+			<a href=""><p>Personnel Assigment and Training Development</p></a>
+		</div> -->
+		
+	</section>
+	<section id="menu2">
+		
+	</section>
 
-
-
-<script>
+	<div id="barraControl">
+	    	<div class="barraContent">
+	      		<div class="barraElement10" id="butPrev">
+	        		<a href="javascript:animatePrevSlide();"><img src="css/images/atras.png"/></a>
+	      		</div>
+		      	
+	      		<!-- <div class="barraElement50" id="contadorSlides">
+	        		<progress value="22" max="100" class="progressBar"></progress>
+	      		</div> -->
+	      	<!-- 	<div class="barraElement20" id="contadorSlidesString">
+	        		<p>02 / 30</p>
+	      		</div> -->
+		      	<div class="barraElement10" id="butNext">
+		        	<a href="javascript:animateNextSlide();"><img src="css/images/adelante.png"/></a>
+		      </div>
+    		</div>
+  		</div>
+  		<div id="menuButton" class="barraElement10">
+		    <a href="javascript:animateOpenMenu();"><img src="css/images/menu.png"/></a>
+		    <a href="#"><img src="css/images/cerrar.png"></a>
+		</div> 	
+	</div> 
+ <script>
     initScormLMS();
     updateCounterSlider();
     createMulti(1);
   </script>
-
 </body>
 </html>

@@ -59,7 +59,7 @@ console.log(ligas);
   var html= " ";
   html += '<div id="main-menu">';
    for (var i = 0; i < menuTitles.length; i++) {
-        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(' + menuTitles[i].id + ',\'' + menuTitles[i].liga +'\')">'+ menuTitles[i].nombreEnMenu +'</a>';
+        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(\''+ menuTitles[i].nombreEnMenu + '\','+ menuTitles[i].id + ',\'' + menuTitles[i].liga +'\')">'+ menuTitles[i].nombreEnMenu +'</a>';
 
   }
         html += '<a class="listItemMenu" href="#" onClick="javascript:closeMenu()">Close X</a></div>';
@@ -68,7 +68,9 @@ console.log(ligas);
   };
 
 
-  function imprimirSubmenu(indiceclickeado, ligaclickeadaMenu) {
+  function imprimirSubmenu(tituloclikeado, indiceclickeado, ligaclickeadaMenu) {
+  	document.getElementById("menu-title").innerHTML = tituloclikeado;
+
   	if(menuTitles[indiceclickeado-1].tieneliga == true){
   		window.location.href = ligaclickeadaMenu;
 
@@ -80,7 +82,7 @@ console.log(ligas);
   		for(var j = 0; j < submenuTitles.length; j++){
 	  	
   			if(indiceclickeado == submenuTitles[j].idPadre){
-  				htmlSubmenu += '<a class="listItemMenu" href="#" onClick="javascript:sendToLink(\''+ submenuTitles[j].liga +'\')">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
+  				htmlSubmenu += '<a class="listItemMenu" href="#" onClick="javascript:sendToLink(\''+ submenuTitles[j].nombreEnSubmenu + '\',\'' + submenuTitles[j].liga +'\')">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
   			}
   		}
  
@@ -97,9 +99,11 @@ console.log(ligas);
   		}
 */
 
-	function sendToLink(ligaclickeada){
+	function sendToLink(tituloSubmenuclickeado, ligaclickeada){
+		document.getElementById("menu-title").innerHTML = tituloSubmenuclickeado;
+
+		document.getElementById("menu-title").innerHTML = indiceclickeado;
 		
-		window.location.href = ligaclickeada;
 
 	}
 

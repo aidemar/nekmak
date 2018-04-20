@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+<meta name="authoring-tool" content="Adobe_Animate_CC">
+  <title>inicio</title>
+  
+<link rel="stylesheet" href="css/estilosTemplate.css">
+  
+<script>
+    function autoResize(i){
+      var iframeHeight=
+      (i).contentWindow.document.body.scrollHeight;
+      (i).height=iframeHeight+20;
+    }
+    
+
+  
+</script>
+  
+<script language="JavaScript" src="infoScorm/scormData.js"></script>
+  <script language="JavaScript" src="scripts/SCO.js"></script>
+  <script language="JavaScript" src="scripts/SCORMFlash.js"></script>
+  <!-- write your code here -->
+</head>
+<body style="margin:0px;">
+
+  <div id="barraControl">
+    <div class="barraContent">
+      <div class="barraElement10" id="butPrev">
+        <a href="javascript:animatePrevSlide();"><img src="css/images/atras.png"/></a>
+      </div>
+      <div class="barraElement10">
+        <a href="javascript:animateOpenMenu();"><img src="css/images/menu.png"/></a>
+      </div>
+      <div class="barraElement50" id="contadorSlides">
+        <progress value="22" max="100" class="progressBar"></progress>
+      </div>
+      <div class="barraElement20" id="contadorSlidesString">
+        <p>02 / 30</p>
+      </div>
+      <div class="barraElement10" id="butNext">
+        <a href="javascript:animateNextSlide();"><img src="css/images/adelante.png"/></a>
+      </div>
+    </div>
+  </div>
+  <div class="stockIframe " id="contentIframe">
+    &nbsp;
+  </div>
+  <!--<div id="menu">
+  </div>-->
+  <div id="menu">
+  </div>
+  <div id="popUpDiv">
+  </div>
+  
+
+
+
+<script>
+    initScormLMS();
+    updateCounterSlider();
+    createMulti(1);
+  </script>
+
+</body>
+</html>

@@ -145,7 +145,17 @@ a:hover {
   padding-right: 5%;
   font-weight: bold;
   font-family: Arial;
+  margin-bottom: 0;
+}
 
+#menu-title{
+  color: white;
+  font-size: 20px;
+  text-align: right;
+  padding-top: 12px;
+  padding-right: 5%;
+  font-weight: bold;
+  font-family: Arial;
 }
 
 .first-p {
@@ -170,11 +180,11 @@ a:hover {
 
 #butNext {
   margin-left: 70%;
-  z-index: -1;
+  z-index: 1;
 }
 
 #butPrev {
-  z-index: -2;
+  z-index: 2;
 }
 
 #menuButton {
