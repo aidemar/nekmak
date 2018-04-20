@@ -9,7 +9,7 @@ var menuData = [
           "id":2,
           "nombreEnMenu":"Navigation",
           "liga": "google.com",
-          "tieneliga": true,
+          "tieneliga": false,
  		  "liga": "google.com"    
         },
         {
@@ -23,13 +23,13 @@ var menuData = [
 
 var submenuData =  [
         {     
-          "idPadre":1,       
+          "idPadre":2,       
           "nombreEnSubmenu": "Program Administration",
           "liga": "google.com"
 
         },
         {
-          "idPadre":1,       
+          "idPadre":2,       
           "nombreEnSubmenu": "Product and Process Development",
           "liga": "google.com"
        
@@ -52,13 +52,15 @@ var submenuData =  [
 var menuTitles = menuData;
 console.log(menuTitles);
 var submenuTitles = submenuData;
+var ligas = menuTitles[2].tieneliga;
+console.log(ligas);
 
   function animateOpenMenu(){
       
   var html= " ";
   html += '<div id="main-menu">';
    for (var i = 0; i < menuTitles.length; i++) {
-        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(id);">'+ menuTitles[i].nombreEnMenu +'</a>';
+        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(' + menuTitles[i].id + ')">'+ menuTitles[i].nombreEnMenu +'</a>';
 
   }
         html += '</div>';
@@ -67,14 +69,55 @@ var submenuTitles = submenuData;
   };
 
 
-  function imprimirSubmenu(element) {
-  	var htmlSubmenu = " ";
+  function imprimirSubmenu(indiceclickeado) {
+
+
+  	  	var htmlSubmenu = " ";
+  		htmlSubmenu += '<div id="submenu">';
+
+  		for(var j = 0; j < submenuTitles.length; j++){
+	  	
+  			if(indiceclickeado == submenuTitles[j].idPadre){
+  				htmlSubmenu += '<a class="listItemMenu" href="#">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
+  			}
+
+  		}
+  	
+
+  		htmlSubmenu += '</div>';
+  		document.getElementById("menu2").innerHTML = htmlSubmenu;
+	  
+  	};
+
+/*		if(menuTitles[indiceclickeado-1].tieneliga == true){
+  		alert(":)");
+  		} else {
+  		alert("AA");
+  		}{
+*/
+
+
+
+
+  function mostrarId(indiceclickeado){
+  	//Parámentro es una variable que no necesita ser definida.
+  	//Queremos identificar el valor del elemento clickeado.
+  	//La función cuando se mande llamar espera un parámetro. 
+  	//Esto es la definición.
+  	//Un evento realiza la llamada.
+  	//No existe una funcion que se llame mostrarId y que no espere parámetros. 
+  	//En el evento escribi es el valor que queremos comparar, se convierte en parámetro. 
+  	// Manual var  indiceclickeado= 2;
+  	alert(menuTitles[indiceclickeado-1].nombreEnMenu);
+  }
+
+
+
+/*  	var htmlSubmenu = " ";
   	htmlSubmenu += '<div id="submenu">';
 
   	for(var i =0; i < menuTitles.length; i++) {
   		for(var j = 0; j < submenuTitles.length; j++){
-  			/*console.log(menuTitles[i].id);
-  			console.log(submenuTitles[j].idPadre);*/
 	  	
   			if(menuTitles[i].id == submenuTitles[j].idPadre){
   				htmlSubmenu += '<a class="listItemMenu" href="#">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
@@ -84,6 +127,8 @@ var submenuTitles = submenuData;
   	}
 
   		htmlSubmenu += '</div>';
-  		document.getElementById("menu2").innerHTML = htmlSubmenu;
+  		document.getElementById("menu2").innerHTML = htmlSubmenu*/;
 
-  };
+
+  			/*console.log(menuTitles[i].id);
+  			console.log(submenuTitles[j].idPadre);*/
