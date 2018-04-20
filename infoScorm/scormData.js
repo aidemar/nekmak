@@ -698,7 +698,8 @@ function chechSpecific(valor){
    for (var i = 0; i < prueba2.length; i++) {
     if(prueba2[i].esSubindice == false && prueba2[i].visibleEnMenu == true){
         console.log(i);
-        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirElemento(' + prueba2[i].ID + ');">'+ prueba2[i].nombreEnMenu +'</a>'
+        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirElemento();">'+ prueba2[i].nombreEnMenu +'</a>'
+        // ' + prueba2[i].ID + '
         console.log(prueba2[i].nombreEnMenu);
     }
 
@@ -710,14 +711,27 @@ function chechSpecific(valor){
 
 
 
+
       // document.getElementById("menu").innerHTML = '<div id="submenu"><a href=""><p class="first-p">Program Administration</p></a><a href=""><p>Product and Process Development</p></a><a href=""><p>Tooling/Machine Fixtures Development</p></a><a href=""><p>Manufacturing System Development</p></a><a href=""><p>Personnel Assigment and Training Development</p></a></div>'
       // document.getElementById("menu").innerHTML = lookForMenu();
     /*  document.getElementById("menu").style.height = "100%";
       document.getElementById("menu").style.width = "100%";*/
   };
 
-  function imprimirElemento(idClickeado) {
-    alert(idClickeado);
+  function imprimirElemento() {
+    // alert(idClickeado);
+    var htmlSubMenu = " ";
+    htmlSubMenu += '<div id="submenu">'
+      for (var i = 0; i < prueba2.length; i++){
+        if(prueba2[i].esSubindice == true){
+            htmlSubMenu += '<a class="listItemMenu" href="#">'+ prueba2[i].nombreEnMenu +'</a>'
+            console.log(prueba2[i].esSubindice);
+            console.log(prueba2[i].nombreEnMenu);
+        }
+
+      }
+        htmlSubMenu += '</div>'
+        document.getElementById("menu2").innerHTML = htmlSubMenu;
   }
 
 
