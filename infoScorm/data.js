@@ -3,14 +3,13 @@ var menuData = [
           "id":1,
           "nombreEnMenu":"Inicio",
           "tieneliga": true,
-          "liga": "google.com"
+          "liga": "https://www.google.com"
          }, 
         {
           "id":2,
           "nombreEnMenu":"Navigation",
-          "liga": "google.com",
           "tieneliga": false,
- 		  "liga": "google.com"    
+ 		  "liga": ""    
         },
         {
           "id":3,
@@ -25,25 +24,25 @@ var submenuData =  [
         {     
           "idPadre":2,       
           "nombreEnSubmenu": "Program Administration",
-          "liga": "google.com"
+          "liga": "https://www.google.com"
 
         },
         {
           "idPadre":2,       
           "nombreEnSubmenu": "Product and Process Development",
-          "liga": "google.com"
+          "liga": "https://www.google.com"
        
         },
         {
           "idPadre":2,       
           "nombreEnSubmenu": "Tooling",
-          "liga": "google.com"
+          "liga": "https://www.google.com"
          
         },
         {
           "idPadre":3,       
           "nombreEnSubmenu": "Machine Fixtures Development",
-          "liga": "google.com"
+          "liga": "https://www.google.com"
          
         },
 
@@ -80,7 +79,7 @@ console.log(ligas);
   		for(var j = 0; j < submenuTitles.length; j++){
 	  	
   			if(indiceclickeado == submenuTitles[j].idPadre){
-  				htmlSubmenu += '<a class="listItemMenu" href="#">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
+  				htmlSubmenu += '<a class="listItemMenu" href="#" onClick="javascript:sendToLink(\''+ submenuTitles[j].liga +'\')">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
   			}
   		}
  
@@ -97,6 +96,11 @@ console.log(ligas);
   		}
 */
 
+	function sendToLink(ligaclickeada){
+		
+		window.location.href = ligaclickeada;
+
+	}
 
 
 
