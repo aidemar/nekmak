@@ -24,25 +24,25 @@ var submenuData =  [
         {     
           "idPadre":2,       
           "nombreEnSubmenu": "Program Administration",
-          "liga": "https://www.google.com"
+          "liga": "https://www.twitter.com"
 
         },
         {
           "idPadre":2,       
           "nombreEnSubmenu": "Product and Process Development",
-          "liga": "https://www.google.com"
+          "liga": "https://www.instagram.com"
        
         },
         {
           "idPadre":2,       
           "nombreEnSubmenu": "Tooling",
-          "liga": "https://www.google.com"
+          "liga": "https://www.netflix.com"
          
         },
         {
           "idPadre":3,       
           "nombreEnSubmenu": "Machine Fixtures Development",
-          "liga": "https://www.google.com"
+          "liga": "https://www.spotify.com"
          
         },
 
@@ -59,18 +59,19 @@ console.log(ligas);
   var html= " ";
   html += '<div id="main-menu">';
    for (var i = 0; i < menuTitles.length; i++) {
-        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(' + menuTitles[i].id + ')">'+ menuTitles[i].nombreEnMenu +'</a>';
+        html += '<a class="listItemMenu" href="#" onClick="javascript:imprimirSubmenu(' + menuTitles[i].id + ',\'' + menuTitles[i].liga +'\')">'+ menuTitles[i].nombreEnMenu +'</a>';
 
   }
-        html += '</div>';
+        html += '<a class="listItemMenu" href="#" onClick="javascript:closeMenu()">Close X</a></div>';
         document.getElementById("menu").innerHTML = html;
  
   };
 
 
-  function imprimirSubmenu(indiceclickeado) {
+  function imprimirSubmenu(indiceclickeado, ligaclickeadaMenu) {
   	if(menuTitles[indiceclickeado-1].tieneliga == true){
-  		alert(":)");
+  		window.location.href = ligaclickeadaMenu;
+
   		} else {
   		
   	  	var htmlSubmenu = " ";

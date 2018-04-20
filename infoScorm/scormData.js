@@ -777,8 +777,8 @@ function chechSpecific(valor){
 
   function closeMenu(){
 
-    alert(prueba3);
     document.getElementById("menu").innerHTML = "";
+    document.getElementById("menu2").innerHTML = "";
   /*  document.getElementById("menu").style.height = "0px";
     document.getElementById("menu").style.width = "0px";*/
   }
