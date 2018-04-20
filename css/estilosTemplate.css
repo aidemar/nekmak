@@ -1,0 +1,185 @@
+html,body {
+  /*height: 100%*/
+  width: 1009px;
+  height: 662px;
+  margin: 0;
+}
+.stockIframe {
+  width:100%;
+  height:95%;
+}
+.stockIframe iframe{
+  width:100%;
+  height:95%;
+  border:0;
+  overflow:hidden;
+}
+
+#barraControl{
+  height:55px;
+  /*background-color:black;*/
+  text-align:center;
+  /*color: white;*/
+  padding-top: 25%;
+  /*position: absolute;*/
+  /*z-index: -1;*/
+  width: 50%;
+}
+
+.barraContent{
+  max-width: 1024px;
+  margin:0 auto;
+}
+.barraElement50{
+  float:left;
+  width:50%;
+  text-align:center;
+  padding-top:17px;
+}
+.barraElement10{
+  float:left;
+  width:10%;
+  text-align:center;
+}
+.barraElement20{
+  float:left;
+  width:20%;
+  text-align:center;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+.progressBar{
+  background-color:#D3D3D3;
+  border: none;
+  width:100%;
+  border-radius: 2px;
+}
+#popUpDiv{
+  background-color:rgba(0,0,0,0.9);
+  border:0;
+  height:0px;
+  width:0px;
+  position:absolute;
+  top:0px;
+  margin:0 auto;
+}
+/*#menu{
+  background-color:rgba(0,0,0,0.9);
+  border:0;
+  height:0px;
+  width:0px;
+  color:#a8a8a8;
+  font-family: Tahoma, Geneva, sans-serif;
+  position:absolute;
+  top:0px;
+  margin:0 auto;
+}*/
+
+/*#menu a{
+  text-decoration: none;
+  color:hotpink;
+}*/
+.menuContent{
+  max-width: 900px;
+  margin:0 auto;
+}
+.menuOrden50{
+  float:left;
+  width:42%;
+  padding-left:8%;
+}
+
+/*Estilos*/
+
+header {
+  width: 1009px;
+  height: 82px;
+  background-image: url("../css/images/barra_superior.png");
+  display: inline-block;
+
+}
+
+#main-menu {
+  background-color: #0074bb;
+  width: 18%;
+  height: 580px;
+  font-size: 18px; 
+  font-family: Arial;
+  text-align: center;
+  line-height: 90%;
+  float:left;
+  position: relative;
+  z-index: 999;
+  /*opacity: 0.5;*/
+}
+
+.listItemMenu{
+  display: block;
+  margin: 10px;
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+p {
+  margin-top: 0px;
+}
+
+a:hover { 
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#header-img {
+  width: 1009px;
+  height: 82px;
+}
+
+.header-title {
+  color: white;
+  font-size: 28px;
+  text-align: right;
+  padding-top: 9px;
+  padding-right: 5%;
+  font-weight: bold;
+  font-family: Arial;
+
+}
+
+.first-p {
+  padding-top: 50px;
+}
+
+#submenu {
+  background-color: #539965;
+  font-size: 18px; 
+  font-family: Arial;
+  width: 25%;
+  height: 580px;
+  float:left;
+  position: relative;
+  z-index: 998;
+  padding-left: 5%;
+}
+
+#butPrev, #butNext{
+  position: absolute;
+}
+
+#butNext {
+  margin-left: 70%;
+  z-index: -1;
+}
+
+#butPrev {
+  z-index: -2;
+}
+
+#menuButton {
+  padding-top: 18%;
+  position: absolute;
+  z-index: 0;
+  margin-left: 70%;
+}

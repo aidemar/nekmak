@@ -1,0 +1,46 @@
+<html>
+<script>
+function closeMainWindow() {
+	top.window.close();
+}
+</script>
+
+<!--Adobe Edge Runtime End-->
+
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++LMS SCRIPTS OPENTEC++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<script language="JavaScript" src="scripts/AC_RunActiveContent.js"></script>
+<script language="JavaScript" src="scripts/SCORMFlash.js"></script>
+<!-- <script language="JavaScript" src="scripts/SCORMFlash_shell.js"></script> -->
+<script language="JavaScript" src="scripts/SCO.js"></script>
+<script language="vbscript">
+Sub SCOFlash_FSCommand(ByVal command, ByVal args)
+    call SCOFlash_DoFSCommand(command, args)
+end sub
+</script>
+<script>
+	var pathASW = window.location.pathname;
+	var pageASW = pathASW.split("/").pop();
+	console.log( pageASW );
+	updateLessonLocation(pageASW);
+</script>
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- +++++++++++LMS SCRIPTS OPENTEC++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+<!-- ++++++++++++++++++++++++++++++++++++++++++ -->
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>Salir del Curso</title>
+</head>
+<body onload="closeMainWindow()">
+
+</body>
+
+</html>

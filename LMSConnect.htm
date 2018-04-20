@@ -1,0 +1,33 @@
+<html>
+<head>
+<script language="JavaScript" src="scripts/SCOConfig.js"></script>
+<script language="JavaScript" src="scripts/findAPI.js"></script>
+<script language="JavaScript" src="scripts/SCO.js"></script>
+<script language="JavaScript" src="scripts/calculateTime.js"></script>
+<script language="JavaScript">
+
+// Instance of configuration object
+var o_Config = new Config;
+
+// Instance of SCO object
+var o_SCO = new SCO;
+
+if (o_SCO.initialize()){
+	o_SCO.getInitialData();
+	window.onbeforeunload = closingSCO;
+	startTimer();
+	o_SCO.setStatus("incomplete");
+	o_SCO.showMessage(o_SCO.lessonLocation);
+	parent.ContentFrame.location = o_SCO.lessonLocation;
+}
+
+function closingSCO(){
+	o_SCO.finalize();
+}
+</script>
+</head>
+
+<body>
+</body>
+
+</html>
