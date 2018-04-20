@@ -70,8 +70,10 @@ console.log(ligas);
 
 
   function imprimirSubmenu(indiceclickeado) {
-
-
+  	if(menuTitles[indiceclickeado-1].tieneliga == true){
+  		alert(":)");
+  		} else {
+  		
   	  	var htmlSubmenu = " ";
   		htmlSubmenu += '<div id="submenu">';
 
@@ -80,20 +82,19 @@ console.log(ligas);
   			if(indiceclickeado == submenuTitles[j].idPadre){
   				htmlSubmenu += '<a class="listItemMenu" href="#">' + submenuTitles[j].nombreEnSubmenu + '</a>'; 
   			}
-
   		}
-  	
-
+ 
   		htmlSubmenu += '</div>';
   		document.getElementById("menu2").innerHTML = htmlSubmenu;
-	  
+  	
+  		}  
   	};
 
 /*		if(menuTitles[indiceclickeado-1].tieneliga == true){
   		alert(":)");
   		} else {
   		alert("AA");
-  		}{
+  		}
 */
 
 
