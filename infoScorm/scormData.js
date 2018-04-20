@@ -162,31 +162,7 @@ var scormData = {
 
 };
 
-// var subMenuData = {
 
-//   "info" := [
-//         {     
-//           "ID":1,
-//           "nombreEnMenu":"Inicio",
-//           "nombreEnSubmenu": "Program Administration"
-//           "nombreEscena":"nem_intro.html",
-          
-//         {
-//           "ID":2,
-//           "nombreEnMenu":"Navigation",
-//           "nombreEnSubmenu": "Product and Process Development";
-//           "nombreEscena":"nem_mt1_001.html",
-       
-//         },
-//         {
-//           "ID":3,
-//           "nombreEnMenu":"Welcome",
-//           "nombreEnSubmenu": "Tooling/Machine Fixtures Development";
-//           "nombreEscena":"nem_mt1_002.html",
-         
-//         },
-//   ]
-// };
 
 var prueba = scormData.info;
     console.log(prueba);
